@@ -8,14 +8,13 @@ import { createOrder, clearOrder } from "../actions/orderActions";
 import { clearCart } from "../actions/cartActions";
 
 const PlaceOrderScreen = ({ history }) => {
-  const addDecimals = (num) => {
-    return (Math.round(num * 100) / 100).toFixed(2);
-  };
-
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);
 
+  const addDecimals = (num) => {
+    return (Math.round(num * 100) / 100).toFixed(2);
+  };
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
