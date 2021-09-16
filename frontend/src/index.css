@@ -19,3 +19,12 @@ h2 {
 .rating span {
   margin: 0.1rem;
 }
+
+.full-height-image {
+  height: 100%;
+  width: 100%;
+}
+
+.min-height-250 {
+  min-height: 250px;
+}
