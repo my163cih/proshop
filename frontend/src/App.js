@@ -21,7 +21,7 @@ import ProductEditScreen from "./screens/ProductEditScreen";
 
 const App = () => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Header />
       <main className='py-3'>
         <Container>
