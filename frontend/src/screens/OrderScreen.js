@@ -23,7 +23,7 @@ const OrderScreen = ({ match, history }) => {
   const { loading: loadingPay, success: successPay } = orderPay;
 
   const orderDeliver = useSelector((state) => state.orderDeliver);
-  const { loading: loadingDeliver, success: successDeliver } = orderDeliver;
+  const { success: successDeliver } = orderDeliver;
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
