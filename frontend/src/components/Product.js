@@ -7,14 +7,14 @@ const Product = ({ product }) => {
   return (
     <>
       <Card className='my-3 p-3 rounded'>
-        <Link to={`/product/${product._id}`}>
+        <Link to={`${process.env.PUBLIC_URL}/product/${product._id}`}>
           <div className='d-flex min-height-250 align-items-center'>
             <Card.Img src={product.image} variant='top' />
           </div>
         </Link>
 
         <Card.Body>
-          <Link to={`/product/${product._id}`}>
+          <Link to={`${process.env.PUBLIC_URL}/product/${product._id}`}>
             <Card.Title as='div'>
               <strong>{product.name}</strong>
             </Card.Title>

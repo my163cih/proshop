@@ -64,7 +64,15 @@ const LoginScreen = ({ location, history }) => {
       <Row className='py-3'>
         <Col>
           New Customer?{" "}
-          <Link to={redirect ? `/register?redirect=${redirect}` : `/register`}>Register</Link>
+          <Link
+            to={
+              redirect
+                ? `${process.env.PUBLIC_URL}/register?redirect=${redirect}`
+                : `${process.env.PUBLIC_URL}/register`
+            }
+          >
+            Register
+          </Link>
         </Col>
       </Row>
     </FormContainer>
