@@ -1,6 +1,5 @@
 import React from "react";
-import { createBrowserHistory } from "history";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -22,7 +21,7 @@ import ProductEditScreen from "./screens/ProductEditScreen";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Header />
       <main className='py-3'>
         <Container>
